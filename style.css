@@ -9,6 +9,7 @@ coloque nas sessões indicadas*/
     /*Se esforce para trabalhar com variáveis, é uma dica profissional valiosa*/
    --cor-de-fundo: #F5F5F5;
    --cor-de-link: #000;
+   --warning-color: #df2525;
 }
 
 body {
@@ -321,10 +322,15 @@ flex-direction: row;
 }
 .formcontato__botao{
     border: 1px solid #2a7ae4;
-    padding: 15px 20px; 
+    padding: 15px 20px;
+    
     text-decoration: none;
     background-color: #2a7ae4;
     color: white;  
+}
+
+.botton_container{
+    padding-top: 1rem;
 }
 
 .formcontato__input, .formcontato__textarea{
@@ -336,6 +342,31 @@ flex-direction: row;
  border: none;
  border-bottom: 1px solid #2a7ae4;
 }
+
+.formcontato__input:focus, .formcontato__textarea:focus{
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #2a7ae4;
+}
+
+.input::placeholder{
+    visibility: hidden;
+    color: #00000000;
+}
+  
+.input-container--invalid .input-label {
+    color: var(--warning-color);
+    margin: 0px;
+    padding: 0px;
+    font-size: 0.5
+    25rem;
+}
+
+.input-container--invalid, .input-message-error {
+    color: var(--warning-color);
+    display: block;
+}
+
 /*footeer*/
 
 section.footer{
